@@ -32,6 +32,7 @@
             listBoxMessages = new ListBox();
             txtInput = new TextBox();
             btnSend = new Button();
+            lblCount = new Label();
             SuspendLayout();
             // 
             // lblStatus
@@ -58,7 +59,7 @@
             // txtInput
             // 
             txtInput.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            txtInput.Location = new Point(31, 387);
+            txtInput.Location = new Point(31, 368);
             txtInput.Name = "txtInput";
             txtInput.Size = new Size(602, 29);
             txtInput.TabIndex = 2;
@@ -68,7 +69,7 @@
             // 
             btnSend.BackColor = SystemColors.Info;
             btnSend.Font = new Font("서울남산체 M", 20.2499981F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            btnSend.Location = new Point(648, 370);
+            btnSend.Location = new Point(648, 368);
             btnSend.Name = "btnSend";
             btnSend.Size = new Size(112, 59);
             btnSend.TabIndex = 3;
@@ -77,11 +78,22 @@
             btnSend.UseVisualStyleBackColor = false;
             btnSend.Click += btnSend_Click;
             // 
+            // lblCount
+            // 
+            lblCount.AutoSize = true;
+            lblCount.Font = new Font("한컴 고딕", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            lblCount.Location = new Point(31, 409);
+            lblCount.Name = "lblCount";
+            lblCount.Size = new Size(82, 16);
+            lblCount.TabIndex = 4;
+            lblCount.Text = "현재 대화 : 0개";
+            // 
             // Echo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(789, 443);
+            Controls.Add(lblCount);
             Controls.Add(btnSend);
             Controls.Add(txtInput);
             Controls.Add(listBoxMessages);
@@ -98,5 +110,6 @@
         private ListBox listBoxMessages;
         private TextBox txtInput;
         private Button btnSend;
+        private Label lblCount;
     }
 }
