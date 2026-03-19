@@ -52,7 +52,7 @@
             listBoxMessages.FormattingEnabled = true;
             listBoxMessages.Location = new Point(31, 65);
             listBoxMessages.Name = "listBoxMessages";
-            listBoxMessages.Size = new Size(705, 280);
+            listBoxMessages.Size = new Size(729, 280);
             listBoxMessages.TabIndex = 1;
             // 
             // txtInput
@@ -60,17 +60,19 @@
             txtInput.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
             txtInput.Location = new Point(31, 387);
             txtInput.Name = "txtInput";
-            txtInput.Size = new Size(574, 29);
+            txtInput.Size = new Size(602, 29);
             txtInput.TabIndex = 2;
+            txtInput.KeyDown += Enterkey_Input;
             // 
             // btnSend
             // 
             btnSend.BackColor = SystemColors.Info;
             btnSend.Font = new Font("서울남산체 M", 20.2499981F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            btnSend.Location = new Point(624, 370);
+            btnSend.Location = new Point(648, 370);
             btnSend.Name = "btnSend";
             btnSend.Size = new Size(112, 59);
             btnSend.TabIndex = 3;
+            btnSend.TabStop = false;
             btnSend.Text = "전송";
             btnSend.UseVisualStyleBackColor = false;
             btnSend.Click += btnSend_Click;
