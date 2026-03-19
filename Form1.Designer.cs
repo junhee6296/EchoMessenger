@@ -1,6 +1,6 @@
 ﻿namespace EchoMessenger
 {
-    partial class Form1
+    partial class Echo
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,18 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
+            lblStatus = new Label();
+            listBoxMessages = new ListBox();
+            txtInput = new TextBox();
+            btnSend = new Button();
             SuspendLayout();
             // 
-            // Form1
+            // lblStatus
+            // 
+            lblStatus.AutoSize = true;
+            lblStatus.Font = new Font("서울남산 장체 L", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            lblStatus.ForeColor = Color.DodgerBlue;
+            lblStatus.Location = new Point(22, 20);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(252, 42);
+            lblStatus.TabIndex = 0;
+            lblStatus.Text = "Echo Messenger";
+            // 
+            // listBoxMessages
+            // 
+            listBoxMessages.BackColor = SystemColors.InactiveCaption;
+            listBoxMessages.Font = new Font("서울남산체 M", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            listBoxMessages.FormattingEnabled = true;
+            listBoxMessages.Location = new Point(31, 65);
+            listBoxMessages.Name = "listBoxMessages";
+            listBoxMessages.Size = new Size(705, 280);
+            listBoxMessages.TabIndex = 1;
+            // 
+            // txtInput
+            // 
+            txtInput.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            txtInput.Location = new Point(31, 387);
+            txtInput.Name = "txtInput";
+            txtInput.Size = new Size(574, 29);
+            txtInput.TabIndex = 2;
+            // 
+            // btnSend
+            // 
+            btnSend.BackColor = SystemColors.Info;
+            btnSend.Font = new Font("서울남산체 M", 20.2499981F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            btnSend.Location = new Point(624, 370);
+            btnSend.Name = "btnSend";
+            btnSend.Size = new Size(112, 59);
+            btnSend.TabIndex = 3;
+            btnSend.Text = "전송";
+            btnSend.UseVisualStyleBackColor = false;
+            btnSend.Click += btnSend_Click;
+            // 
+            // Echo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(789, 443);
-            Name = "Form1";
+            Controls.Add(btnSend);
+            Controls.Add(txtInput);
+            Controls.Add(listBoxMessages);
+            Controls.Add(lblStatus);
+            Name = "Echo";
             Text = " Echo Messenger";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label lblStatus;
+        private ListBox listBoxMessages;
+        private TextBox txtInput;
+        private Button btnSend;
     }
 }
