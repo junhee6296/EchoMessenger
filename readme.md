@@ -10,6 +10,10 @@
   - Visual Studio를 이용하여 UI 디자인
   - string 클래스를 이용한 사용자 입력 데이터 처리
   - DateTime 클래스를 이용한 현재시간 정보 구하기
+  - MessageBox 기능 이용한 알림 및 경고
+  - focus, clear 기능을 통한 커서 고정 및 메시지 삭제
+  - keycode 코드를 통한 키바인딩 
+  - Count 기능을 통한 갯수 세기 
 
 
 ## 실행 화면 (과제1)
