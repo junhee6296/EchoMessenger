@@ -24,8 +24,15 @@ namespace EchoMessenger
                 txtInput.Focus();
                 return; // 함수 종료
             }
-            
-            // 1-3. 현재 시간 구하기 및 메시지 결합 (타임스탬프) 
+
+            // 1-3 최대글자 수 제한
+            if (txtInput.Text.Length > 50)
+            {
+                MessageBox.Show("메시지는 50자까지만 입력 가능합니다.", "경고");
+                return;
+            }
+
+            // 1-4. 현재 시간 구하기 및 메시지 결합 (타임스탬프) 
             string time = DateTime.Now.ToString("HH:mm:ss");
             string displaymsg = $"[{time}] {typed_msg}";
 
@@ -51,6 +58,35 @@ namespace EchoMessenger
                 // 버튼 클릭과 같은 효과
                 btnSend_Click(sender, e);
             }
+        }
+
+        private void btnClearALL_Click(object sender, EventArgs e)
+        {
+            // 리스트박스의 모든 항목을 제거
+            listBoxMessages.Items.Clear();
+
+            // 상태 표시 레이블 초기화
+            lblCount.Text = "현재 대화: 0개";
+            txtInput.Focus();
+        }
+
+        // 1. 선택 항목 삭제 버튼
+        private void btnClearSelect_Click(object sender, EventArgs e)
+        {
+            // 선택된 항목의 인덱스가 -1이면 선택된 것이 없다는 뜻
+            if (listBoxMessages.SelectedIndex != -1)
+            {
+                // 선택된 항목을 삭제
+                listBoxMessages.Items.RemoveAt(listBoxMessages.SelectedIndex);
+
+                // 삭제 후 상태 표시 레이블 업데이트
+                lblCount.Text = $"현재 대화: {listBoxMessages.Items.Count}개";
+            }
+            else
+            {
+                MessageBox.Show("삭제할 메시지를 선택해주세요.", "알림");
+            }
+            txtInput.Focus();
         }
     }
 }

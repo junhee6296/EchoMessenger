@@ -33,6 +33,8 @@
             txtInput = new TextBox();
             btnSend = new Button();
             lblCount = new Label();
+            button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // lblStatus
@@ -88,11 +90,39 @@
             lblCount.TabIndex = 4;
             lblCount.Text = "현재 대화 : 0개";
             // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.Info;
+            button1.Font = new Font("Microsoft Sans Serif", 8.25F);
+            button1.Location = new Point(550, 403);
+            button1.Name = "button1";
+            button1.Size = new Size(83, 29);
+            button1.TabIndex = 5;
+            button1.TabStop = false;
+            button1.Text = "전체삭제";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += btnClearALL_Click;
+            // 
+            // button2
+            // 
+            button2.BackColor = SystemColors.Info;
+            button2.Font = new Font("Microsoft Sans Serif", 8.25F);
+            button2.Location = new Point(461, 403);
+            button2.Name = "button2";
+            button2.Size = new Size(83, 29);
+            button2.TabIndex = 6;
+            button2.TabStop = false;
+            button2.Text = "선택삭제";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += btnClearSelect_Click;
+            // 
             // Echo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(789, 443);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(lblCount);
             Controls.Add(btnSend);
             Controls.Add(txtInput);
@@ -111,5 +141,7 @@
         private TextBox txtInput;
         private Button btnSend;
         private Label lblCount;
+        private Button button1;
+        private Button button2;
     }
 }
