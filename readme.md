@@ -22,6 +22,7 @@
 ![과제1 실행화면](img/1.png)
 
 - 과제 내용
+	- label, textbox, listbox, button을 가독성이 좋은 변수로 정의하고 추가합니다.
 	- typed_msg 변수를 정의하여 txtInput의 텍스트를 listBoxMessages에 item 으로 add 합니다
 	- 이후 txtInput을 clear합니다.
 - 구현 내용과 기능 설명
